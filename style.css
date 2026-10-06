@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    margin-top: 30px;
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+thead{
+    background-color: peru;
+    color: #333;
+}
+
+.acoes {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-family: 'Comic Sans MS';
+    padding: 10px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 25px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+}
+
+a:hover {
+    color: #fff;
+    background-color: #333;
+}
+
+.botaoEditar {
+    background-color: #6c6666;
+    color: #fff;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.botaoEditar:hover {
+    background-color: #9b9696;
+    cursor: pointer;
+}
+
+.botaoExcluir {
+    background-color: #c75252;
+    color: #fff;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.botaoExcluir:hover {
+    cursor: pointer;
+    background-color: #de9797;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 6px;
+}
+
+form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-block: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+label {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+input {
+    background-color: #fae3d1;
+    border: 1px solid peru;
+    padding: 3px;
+    border-radius: 3px;
+    outline: none;
+}
+
+input:focus, 
+select:focus {
+    border: 2px solid peru;
+}
+
+input::placeholder {
+    color: #cba46a;
+}
+
+select {
+    background-color: #fae3d1;
+    border: 1px solid peru;
+    padding: 3px;
+    border-radius: 3px;
+    outline: none;
+    color: #cba46a;
+}
+
+.botaoSalvar {
+    background-color: peru;
+    color: #fae3d1;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.botaoSalvar:hover {
+    background-color: #9f5a14;
+    cursor: pointer;
+}
+
+#mensagem {
+    display: none;
+    padding: 5px;
+    font-size: 12px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+#mensagem.erro {
+    display: block;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 2px solid #991b1b;
+}
+
+#mensagem.sucesso {
+    display: block;
+    color: #1f2220;
+    background-color: #dcfce7;
+    border: 2px solid #166534;
+}
