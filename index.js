@@ -51,7 +51,7 @@ function excluirProduto(id) {
     for (let i = 0; i < produtosSalvos.length; i++) {
         if(produtosSalvos[i].id === id){
             produtosSalvos.splice(i, 1);
-        }
+        }      
     }
 
     localStorage.setItem("produtos", JSON.stringify(produtosSalvos))
