@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEU PROJETO CRUD</title>
+    <title>Catálogo | Projeto CRUD</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Projeto CRUD</h1>
-    </header>
-    <main>
+    <header class="topo">
+        <a class="marca" href="index.html">
+            CATÁLOGO<span>.</span>
+        </a>
+
         <nav>
-            <ul>
-                <li>
-                    <a href="index.html">HOME</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">CADASTRAR</a>
-                </li>
-            </ul>
+            <a class="link-ativo" href="index.html">Produtos</a>
+            <a class="botao botao-pequeno" href="cadastro.html">+ Novo produto</a>
         </nav>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NOME</th>
-                    <th>PREÇO</th>
-                    <th>CATEGORIA</th>
-                    <th>AÇÕES</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- 
-                <tr>
-                    <td>1</td>
-                    <td>Mouse</td>
-                    <td>189.99</td>
-                    <td>Tecnologia</td>
-                    <td class="acoes">
-                        <button class="botaoEditar">Editar</button>
-                        <button class="botaoExcluir">Excluir</button>
-                    </td>
-                </tr> -->
-            </tbody>
-        </table>
+    </header>
+
+    <main class="container">
+        <section class="boas-vindas">
+            <div>
+                <p class="etiqueta">PAINEL DE PRODUTOS</p>
+                <h1>Organize seu catálogo</h1>
+                <p class="subtitulo">
+                    Uma tela simples para visualizar e cadastrar produtos.
+                </p>
+            </div>
+
+            <div class="resumo">
+                <span id="totalProdutos">0</span>
+                <small>produtos cadastrados</small>
+            </div>
+        </section>
+
+        <section class="cartao tabela-cartao">
+            <div class="cabecalho-cartao">
+                <div>
+                    <h2>Produtos</h2>
+                    <p>Os dados aparecem aqui depois do cadastro.</p>
+                </div>
+
+                <a class="link-secundario" href="cadastro.html">
+                    Cadastrar produto →
+                </a>
+            </div>
+
+            <div class="tabela-responsiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>PRODUTO</th>
+                            <th>CATEGORIA</th>
+                            <th>PREÇO</th>
+                            <th>ESTOQUE</th>
+                            <th>STATUS</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaProdutos"></tbody>
+                </table>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>Projeto CRUD - Feito por Gabriel</p>
+        <p>Projeto CRUD · Front-end preparado para integração com Express</p>
     </footer>
+
     <script src="index.js"></script>
 </body>
+
 </html>
